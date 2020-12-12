@@ -14,7 +14,7 @@ export const MainPage: React.FC<{}> = (): ReactElement => {
   const files = event.target.files
   const formData = new FormData()
   formData.append('myFile', files[0])
-  fetch('http://e7d6c970ab8a.ngrok.io/api/images/', {
+  fetch('https://e7d6c970ab8a.ngrok.io/api/images/', {
     method: 'POST',
     body: formData
   })

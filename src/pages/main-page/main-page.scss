@@ -1,0 +1,135 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    color: white;
+    position: relative;
+}
+.name {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+}
+.donate {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: white;
+}
+.link {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    display: flex;
+    a {
+        margin-left: 5px;
+        margin-top: 3px;
+        color: rgb(0, 0, 0);
+    }
+}
+a:-webkit-any-link {
+    text-decoration: none;
+}
+.photo-class {
+    font-size: x-large;
+    color: white;
+}
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+.inputfile + label {
+    color: white;
+    background-color: transparent;
+    display: inline-block;
+    cursor: pointer;
+}
+.all-items{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.inputfile:focus + label,
+.inputfile + label:hover {
+    background-color: transparent;
+}
+button {
+    margin-top: 20px;
+}
+.glow-on-hover {
+    width: 220px;
+    font-size: 1.25em;
+    font-weight: 700;
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-around;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}

@@ -46,7 +46,7 @@ const ZalupaCopyCB = React.useCallback(()=>{
   <div className='all-items'>
     <form encType="multipart/form-data" action="" className='glow-on-hover'>
       <input id="file" name='file' type="file" onChange={handleImageUpload} className='inputFile'/>
-      <label htmlFor="file">Выберете файл</label>
+      <label htmlFor="file">Выберите файл</label>
     </form>
     <pre className='photo-class'>{Zalupa}</pre>
     {Zalupa &&

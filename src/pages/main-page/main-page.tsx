@@ -37,10 +37,10 @@ const ZalupaCopyCB = React.useCallback(()=>{
 
   return (
   <div>
-    <div className='name'>Георгий Шамян</div>
+    <div className='name'>Запруднов Михаил</div>
     <div className='link'>
       <Git />
-      <a href="https://github.com/GShamian" target="_blank">GShamian</a>
+      <a href="https://github.com/MikhailZ00" target="_blank">MikhailZ00</a>
     </div>
     <div className='donate'>Donate: 9161976853</div>
   <div className='all-items'>
